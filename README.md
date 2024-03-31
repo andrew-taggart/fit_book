@@ -1,7 +1,7 @@
 # fit_book (fitConnect??)
 
 
-## READ.md setup TO-DO
+### READ.md setup TO-DO
 - Component Component Hierarchy Diagram (Lucidchart or other) for the frontend
 - Wireframed designs for your Front End
 - Trello Board
