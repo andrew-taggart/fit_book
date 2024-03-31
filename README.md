@@ -19,7 +19,7 @@ Mission statement/description
 - **Payment Method**:
 
 ## Full Entity Relationship Diagram (ERD) for the backend
-![ERD Model](/images)
+![ERD Model](images/BookingERD.jpg)
 
 ## Contact
 - Email
