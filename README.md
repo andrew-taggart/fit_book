@@ -17,13 +17,15 @@ Mission statement/description
 - **Live Chat**:
 - **Blog Platform**:
 - **Payment Method**:
-- 
+
+## Full Entity Relationship Diagram (ERD) for the backend
+![ERD Model](/images)
 
 ## Contact
 - Email
 - [LinkedIn](https://www.linkedin.com/in/andrew-h-taggart/)
 
-Full Entity Relationship Diagram (ERD) for the backend
+
 Component Component Hierarchy Diagram (Lucidchart or other) for the frontend
 Wireframed designs for your Front End
 Trello Board
