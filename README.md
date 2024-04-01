@@ -2,7 +2,6 @@
 
 
 ### READ.md setup TO-DO
-- Component Component Hierarchy Diagram (Lucidchart or other) for the frontend
 - Wireframed designs for your Front End
 - Trello Board
 - Mission statement/description
@@ -26,11 +25,15 @@
 - **Share Files**: Send Files through messages for blog/media posts
 - **Payment Method**: Secure Data and payment options
 
-## Full Entity Relationship Diagram (ERD) for the backend
+## Backend Planning
+### Full Entity Relationship Diagram (ERD) for the backend
 ![ERD Model](images/BookingERD.jpg)
 
 ## Front End Planning
+### Component Hierarchy Diagram
 ![Component Hierarchy Diagram](images/BookingCHD.png)
+
+### Wireframe
 
 ## Contact
 - Email
