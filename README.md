@@ -2,13 +2,14 @@
 
 
 ### READ.md setup TO-DO
-- Wireframed designs for your Front End
-- Trello Board
-- Mission statement/description
+- Wireframed designs for your Front End; Trello Board
 
+
+### Mission statement/description
+Write this section
 
 ### Built With
-
+- **Planning**: LucidChart, Trello, GitHub
 - **Frontend**: React.js, Javascript, CSS
 - **Backend**: Python/Django/SQL
 
