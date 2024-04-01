@@ -1,12 +1,7 @@
-# fit_book (fitConnect??)
+# fitBook (fitConnect?? ProBook??)
 
-
-### READ.md setup TO-DO
-- Wireframed designs for your Front End; Trello Board
-
-
-### Mission statement/description
-Write this section
+### Mission Statement/Description
+(Insert App Name) Appointment booking platform designed to effortlessly connect clients with a diverse range of professionals. Streamlining the discovery and booking of professional services. Providing accessibility, efficiency, and trust for clients; while empowring professionals to expand their visibility, manage appointments, and grow their client base. 
 
 ### Built With
 - **Planning**: LucidChart, Trello, GitHub
@@ -35,6 +30,7 @@ Write this section
 ![Component Hierarchy Diagram](images/BookingCHD.png)
 
 ### Wireframe
+-Wireframed designs for your Front End; Trello Board
 
 ## Contact
 - Email
