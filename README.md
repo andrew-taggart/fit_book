@@ -29,7 +29,7 @@
 ## Full Entity Relationship Diagram (ERD) for the backend
 ![ERD Model](images/BookingERD.jpg)
 
-##Front End Planning
+## Front End Planning
 ![Component Hierarchy Diagram](images/BookingCHD.png)
 
 ## Contact
