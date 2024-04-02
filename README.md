@@ -30,7 +30,7 @@
 ![Component Hierarchy Diagram](images/BookingCHD.png)
 
 ### Wireframe
--Wireframed designs for your Front End; Trello Board
+![Wireframe](images/Wireframe.png)
 
 ## Contact
 - Email
