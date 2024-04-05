@@ -1,10 +1,9 @@
+import React from 'react'
 import { useState } from 'react'
 import './App.css'
 
-import Header from './components/HomePage.jsx'
-imort
+import Header from './components/Header.jsx'
 import Main from './components/Main.jsx'
-imort
 
 function App() {
   const [count, setCount] = useState(0)
