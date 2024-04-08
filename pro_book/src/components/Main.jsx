@@ -7,6 +7,7 @@ import Appointments from '../pages/Appointments'
 import Reviews from '../pages/Reviews'
 import Dash from '../pages/Dashboard'
 import LoginPage from '../pages/LoginPage'
+import CreateUser from '../pages/CreateUser'
 
 const Main = () => {
     return(
@@ -18,6 +19,7 @@ const Main = () => {
                 <Route path="/appointments" element={<Appointments />} />
                 <Route path="/reviews" element={<Reviews />} />
                 <Route path="/login" element={<LoginPage />} />
+                <Route path="/signup" element={<CreateUser />} />
             </Routes>
         </div>
     )

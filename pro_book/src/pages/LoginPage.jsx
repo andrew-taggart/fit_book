@@ -1,7 +1,9 @@
+//double check lifetime access and refresh uses 
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { login } from '../api/authService'
 import { useAuth } from '../contexts/AuthContext'
+import { Link } from 'react-router-dom'
 
 const LoginPage = () => {
     const [username, setUsername] = useState('')
@@ -34,6 +36,7 @@ const LoginPage = () => {
                 </div>
                 <button type="submit">Login</button>
             </form>
+            <p><Link to="/signup"> Create Account </Link></p>
         </div>
     )
 }
