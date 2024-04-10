@@ -2,9 +2,13 @@ from rest_framework import serializers
 from .models import UserProfile, Profession, Service, Appointment, Review
 
 class UserProfileSerializer(serializers.ModelSerializer):
+    #password = serializers.CharField(write_only=True)
+    
     class Meta:
         model = UserProfile
-        fields = ['id', 'username', 'email', 'first_name', 'last_name', 'is_pro', 'profession']
+        fields = ['id', 'username', 'email', 'first_name', 'last_name', 'is_pro', 'profession', 'password']
+        
+        #has password
 
 class ProfessionSerializer(serializers.ModelSerializer):
     class Meta:

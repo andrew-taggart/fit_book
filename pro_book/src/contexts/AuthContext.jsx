@@ -1,30 +1,36 @@
 import React, { createContext, useContext, useState, useEffect } from 'react'
-import { getCurrentUser } from '../api/authService'
+import { login, getCurrentUser } from '../api/authService'
 
-const AuthContext = createContext()
+const AuthContext = createContext(null)
 
 export const useAuth = () => useContext(AuthContext)
 
 export const AuthProvider = ({ children }) => {
-    const [currentUser, setCurrentUser] = useState(null)
+    const [currentUser, setCurrentUser] = useState(getCurrentUser)
 
     useEffect(() => {
-        const user = getCurrentUser()
-        if (user) {
-            setCurrentUser(user)
-        }
+        setCurrentUser(getCurrentUser())
     }, [])
 
+    const handleLogin = async (username, password) => {
+        try {
+            const userData = await login(username, password)
+            setCurrentUser(userData)
+        } catch (error) {
+            console.error("Login failed:", error)
+        }
+    }
+
     // Logout function to clear the user from local storage and state
-    const logout = () => {
+    const handleLogout = () => {
         localStorage.removeItem('user')
         setCurrentUser(null)
     }
 
     const value = {
         currentUser,
-        setCurrentUser,
-        logout
+        login: handleLogin,
+        logout: handleLogout
     }
 
     return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>

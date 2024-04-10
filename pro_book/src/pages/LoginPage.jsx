@@ -1,24 +1,21 @@
 //double check lifetime access and refresh uses 
 import React, { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
-import { login } from '../api/authService'
+import { useNavigate, Link } from 'react-router-dom'
 import { useAuth } from '../contexts/AuthContext'
-import { Link } from 'react-router-dom'
 
 const LoginPage = () => {
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
-    const { setCurrentUser } = useAuth()
+    const { login } = useAuth()
     const navigate = useNavigate()
 
     const handleLogin = async (e) => {
         e.preventDefault()
         try {
-            const user = await login(username, password)
-            setCurrentUser(user)
+            await login(username, password)
             navigate('/')
         } catch (error) {
-            console.error("Login failed:", error.response?.data)
+            console.error("Login failed:", error.mesage)
         }
     }
 
@@ -36,7 +33,7 @@ const LoginPage = () => {
                 </div>
                 <button type="submit">Login</button>
             </form>
-            <p><Link to="/signup"> Create Account </Link></p>
+            <p>Don't have an account? <Link to="/signup"> Create Account </Link></p>
         </div>
     )
 }

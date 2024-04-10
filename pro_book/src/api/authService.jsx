@@ -4,7 +4,11 @@ const API_URL = 'http://127.0.0.1:8000/'
 
 // Function to login users
 export const login = async (username, password) => {
-    const response = await axios.post(`${API_URL}token/`, { username, password })
+    const response = await axios.post(`${API_URL}api/token/`, { username, password }, {
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    })
     if (response.data.access) {
         localStorage.setItem('user', JSON.stringify(response.data))
     }
