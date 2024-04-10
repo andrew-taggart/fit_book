@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 //import { useAuth } from '../contexts/AuthContext'
 import { Link } from 'react-router-dom'
-import ClientDash from './ClientDash'
-import ProDash from './ProDash'
+import ClientDash from './clientPages/ClientDash'
+import ProDash from './proPages/ProDash'
 
 const Dashboard = () => {
     //const { currentUser } = useAuth()
@@ -23,7 +23,6 @@ const Dashboard = () => {
         if (!currentUser) {
             return <p>Please <Link to="/login"> Login </Link></p>
         }
-
         return currentUser.is_pro ? <ProDash /> : <ClientDash />
     }
 
