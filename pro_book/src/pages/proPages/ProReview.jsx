@@ -13,10 +13,10 @@ const ProReview = () => {
             })
             .catch(error => console.error('Error fetching Reviews', error))
 
-        axios.get('http://127.0.0.1:8000/users/?is_pro=true')
+        axios.get('http://127.0.0.1:8000/users/')
             .then(response => {
-                setUsers(response.data)
-                console.log('Users:', response.data)
+                const professionals = response.data.filter(user => user.is_pro === true)
+                setUsers(professionals)
             })
             .catch(error => console.error('Error fetching users', error))
     }, [])
@@ -44,7 +44,7 @@ const ProReview = () => {
                         <li>Review ID: {filteredReview.id}</li>
                         <li>Client: {filteredReview.client}</li>
                         <li>Pro: {filteredReview.professional}</li>
-                        <li>Rating: {filteredReview.rating}</li> 
+                        <li>Rating: {filteredReview.rating}</li>
                         <li>Comment: {filteredReview.comment}</li>
                     </ul>
                 ))}

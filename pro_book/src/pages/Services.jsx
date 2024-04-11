@@ -1,37 +1,38 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
+import ServiceSearch from './clientPages/ServiceSearch'
+import ServiceControl from './proPages/ServiceControl'
 
 const Services = () => {
     const [services, setServices] = useState([])
-    const [professional, setProfessional] = useState('')
-    const [title, setTitle] = useState('')
-    const [description, setDescription] = useState('')
-    const [duration, setDuration] = useState('')
-    const [price, setPrice] = useState(false)
 
-    useEffect(() => {
-        const fetchServices = () => {
-            axios.get('http://127.0.0.1:8000/services/')
-                .then(response => {
-                    setServices(response.data)
-                })
-                .catch(error => console.error('Error fetching Services', error))
+    //temporary logic to control Client/Pro pages
+    const [currentUser, setCurrentUser] = useState({
+        is_pro: false
+    })
+
+    const handleTogglePro = () => {
+        setCurrentUser((prevUser) => ({
+            ...prevUser,
+            is_pro: !prevUser.is_pro,
+        }))
+    }//Condense repetitive code into separate file
+
+    const renderServicesPage = () => {
+        if (!currentUser) {
+            return <p>Please <Link to="/login"> Login </Link></p>
         }
-
-        fetchServices()
-    }, [])
+        return currentUser.is_pro ? <ServiceControl /> : <ServiceSearch />
+    }
     return (
         <div>
-            {services.map(service => (
-                <ul key={service.id}>
-                    <li>Service ID: {service.id}</li>
-                    <li>title: {service.title}</li>
-                    <li>Pro: {service.professional}</li>
-                    <li>Description: {service.description}</li>
-                    <li>Price: {service.price}</li>
-                </ul>
-
-            ))}
+            <div>
+                <label>
+                    Pro/Client Display:
+                    <input type="checkbox" checked={currentUser.is_pro} onChange={handleTogglePro} />
+                </label>
+            </div>
+            {renderServicesPage()}
         </div>
     )
 }
